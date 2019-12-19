@@ -5,24 +5,24 @@
  */
 
 /* 
- * File:   newForm.h
+ * File:   VueSerre.h
  * Author: snir2g2
  *
- * Created on 19 décembre 2019, 16:03
+ * Created on 19 décembre 2019, 16:18
  */
 
-#ifndef _NEWFORM_H
-#define _NEWFORM_H
+#ifndef _VUESERRE_H
+#define _VUESERRE_H
 
-#include "ui_newForm.h"
+#include "ui_VueSerre.h"
 
-class newForm : public QDialog {
+class VueSerre : public QWidget {
     Q_OBJECT
 public:
-    newForm();
-    virtual ~newForm();
+    VueSerre();
+    virtual ~VueSerre();
 private:
-    Ui::newForm widget;
+    Ui::VueSerre widget;
 };
 
-#endif /* _NEWFORM_H */
+#endif /* _VUESERRE_H */
