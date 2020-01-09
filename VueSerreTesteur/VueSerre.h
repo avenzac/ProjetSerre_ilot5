@@ -8,7 +8,7 @@
  * File:   VueSerre.h
  * Author: snir2g2
  *
- * Created on 19 décembre 2019, 16:18
+ * Created on 9 janvier 2020, 17:18
  */
 
 #ifndef _VUESERRE_H
@@ -21,6 +21,7 @@ class VueSerre : public QWidget {
 public:
     VueSerre();
     virtual ~VueSerre();
+    void mettreAJour(); 
 private:
     Ui::VueSerre widget;
 };

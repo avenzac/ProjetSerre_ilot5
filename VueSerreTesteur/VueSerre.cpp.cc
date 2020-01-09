@@ -8,7 +8,7 @@
  * File:   VueSerre.cpp
  * Author: snir2g2
  *
- * Created on 19 décembre 2019, 16:18
+ * Created on 9 janvier 2020, 17:18
  */
 
 #include "VueSerre.h"
@@ -18,4 +18,10 @@ VueSerre::VueSerre() {
 }
 
 VueSerre::~VueSerre() {
+}
+void VueSerre::mettreAJour(){
+    widget.temperature->setText("20"); 
+    widget.hygrometrie->setText("10"); 
+    widget.luminosite->setText("100"); 
+    widget.positionOuvrants->setText("10"); 
 }
