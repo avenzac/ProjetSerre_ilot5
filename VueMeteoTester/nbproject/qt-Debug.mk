@@ -48,9 +48,15 @@ OBJECTS_DIR   = build/Debug/GNU-Linux/
 
 ####### Files
 
-SOURCES       = VueMeteo.cpp_1.cc \
+SOURCES       = ../ClasseMetier/Observable.cpp \
+		../ClasseMetier/Observateur.cpp \
+		ClasseMetier/BulletinMeteo.cpp \
+		VueMeteo.cpp_1.cc \
 		main.cpp moc_VueMeteo.cpp
-OBJECTS       = build/Debug/GNU-Linux/VueMeteo.cpp_1.o \
+OBJECTS       = build/Debug/GNU-Linux/Observable.o \
+		build/Debug/GNU-Linux/Observateur.o \
+		build/Debug/GNU-Linux/BulletinMeteo.o \
+		build/Debug/GNU-Linux/VueMeteo.cpp_1.o \
 		build/Debug/GNU-Linux/main.o \
 		build/Debug/GNU-Linux/moc_VueMeteo.o
 DIST          = /opt/Qt/5.7/gcc_64/mkspecs/features/spec_pre.prf \
@@ -201,7 +207,13 @@ DIST          = /opt/Qt/5.7/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt/5.7/gcc_64/mkspecs/features/exceptions.prf \
 		/opt/Qt/5.7/gcc_64/mkspecs/features/yacc.prf \
 		/opt/Qt/5.7/gcc_64/mkspecs/features/lex.prf \
-		nbproject/nbproject/qt-Debug.pro VueMeteo.h VueMeteo.cpp_1.cc \
+		nbproject/nbproject/qt-Debug.pro ../ClasseMetier/Observable.h \
+		../ClasseMetier/Observateur.h \
+		ClasseMetier/BulletinMeteo.h \
+		VueMeteo.h ../ClasseMetier/Observable.cpp \
+		../ClasseMetier/Observateur.cpp \
+		ClasseMetier/BulletinMeteo.cpp \
+		VueMeteo.cpp_1.cc \
 		main.cpp
 QMAKE_TARGET  = VueMeteoTester
 DESTDIR       = dist/Debug/GNU-Linux/
@@ -534,8 +546,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents VueMeteo.h $(DISTDIR)/
-	$(COPY_FILE) --parents VueMeteo.cpp_1.cc main.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../ClasseMetier/Observable.h ../ClasseMetier/Observateur.h ClasseMetier/BulletinMeteo.h VueMeteo.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../ClasseMetier/Observable.cpp ../ClasseMetier/Observateur.cpp ClasseMetier/BulletinMeteo.cpp VueMeteo.cpp_1.cc main.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents VueMeteo.ui $(DISTDIR)/
 
 
@@ -733,6 +745,17 @@ compiler_lex_clean:
 compiler_clean: compiler_moc_header_clean compiler_uic_clean 
 
 ####### Compile
+
+build/Debug/GNU-Linux/Observable.o: ../ClasseMetier/Observable.cpp ../ClasseMetier/Observable.h \
+		../ClasseMetier/Observateur.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/GNU-Linux/Observable.o ../ClasseMetier/Observable.cpp
+
+build/Debug/GNU-Linux/Observateur.o: ../ClasseMetier/Observateur.cpp ../ClasseMetier/Observateur.h \
+		../ClasseMetier/Observable.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/GNU-Linux/Observateur.o ../ClasseMetier/Observateur.cpp
+
+build/Debug/GNU-Linux/BulletinMeteo.o: ClasseMetier/BulletinMeteo.cpp ClasseMetier/BulletinMeteo.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/GNU-Linux/BulletinMeteo.o ClasseMetier/BulletinMeteo.cpp
 
 build/Debug/GNU-Linux/VueMeteo.cpp_1.o: VueMeteo.cpp_1.cc VueMeteo.h \
 		ui_VueMeteo.h \
