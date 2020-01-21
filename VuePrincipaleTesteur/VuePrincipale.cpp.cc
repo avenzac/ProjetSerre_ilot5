@@ -8,13 +8,16 @@
  * File:   VuePrincipale.cpp
  * Author: snir2g2
  *
- * Created on 8 janvier 2020, 17:36
+ * Created on 21 janvier 2020, 16:17
  */
-
 #include "VuePrincipale.h"
 
 VuePrincipale::VuePrincipale() {
     widget.setupUi(this);
+    laVueMeteo = new VueMeteo();
+    laVueSerre = new VueSerre();
+    widget.meteo.addWidget(laVueMeteo);
+    widget.serre.addWidget(laVueSerre);
 }
 
 VuePrincipale::~VuePrincipale() {

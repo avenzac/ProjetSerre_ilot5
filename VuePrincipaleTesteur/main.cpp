@@ -13,15 +13,16 @@
 
 #include <QApplication>
 #include "VuePrincipale.h"
-
+#include "../VueMeteoTester/VueMeteo.h"
+#include "../VueSerreTesteur/VueSerre.h"
 int main(int argc, char *argv[]) {
-   
+    // initialize resources, if needed
+    // Q_INIT_RESOURCE(resfile);
+
     QApplication app(argc, argv);
     VuePrincipale* vuePrincipale = new VuePrincipale();
     vuePrincipale->show();
-    
-
-    // create and show your widgets here
 
     return app.exec();
 }
+
