@@ -22,7 +22,84 @@
      <height>111</height>
     </rect>
    </property>
-   <layout class="QHBoxLayout" name="meteo"/>
+   <layout class="QHBoxLayout" name="meteo">
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Météo</string>
+      </property>
+      <widget class="QWidget" name="layoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>179</width>
+         <height>54</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QLabel" name="vVent_4">
+            <property name="text">
+             <string>Vitesse du vent :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="temp_2">
+            <property name="text">
+             <string>Température :</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QLineEdit" name="vitesseVent_2">
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="temperature_2">
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+            <property name="clearButtonEnabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QLabel" name="vVent_5">
+            <property name="text">
+             <string>km/h</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="vVent_6">
+            <property name="text">
+             <string>°C</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QWidget" name="horizontalLayoutWidget_2">
    <property name="geometry">

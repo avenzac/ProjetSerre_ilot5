@@ -15,14 +15,7 @@
 
 VuePrincipale::VuePrincipale() {
     widget.setupUi(this);
-    laMeteo = new VueMeteo();
-    laSerre = new VueSerre();
 }
 
 VuePrincipale::~VuePrincipale() {
-}
-
-void VuePrincipale::mettreAJour(){
-    laMeteo->mettreAJour();
-    laSerre->mettreAJour();
 }

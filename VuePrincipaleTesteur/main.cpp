@@ -12,7 +12,6 @@
  */
 
 #include <QApplication>
-
 #include "VuePrincipale.h"
 
 int main(int argc, char *argv[]) {

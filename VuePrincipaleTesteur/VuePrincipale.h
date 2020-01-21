@@ -15,22 +15,15 @@
 #define _VUEPRINCIPALE_H
 
 #include "ui_VuePrincipale.h"
-#include "../VueMeteoTester/VueMeteo.h"
-#include "../VueSerreTesteur/VueSerre.h"
 
 
 class VuePrincipale : public QWidget {
     Q_OBJECT
 public:
     VuePrincipale();
-    ~VuePrincipale();
-    void mettreAJour();
-    
+    virtual ~VuePrincipale();
 private:
     Ui::VuePrincipale widget;
-    VueMeteo* laMeteo;
-    VueSerre* laSerre;
-    
 };
 
 #endif /* _VUEPRINCIPALE_H */
